@@ -1,0 +1,22 @@
+%div{id: "dialog-form" title: "Create new user"}
+  %p{class="validateTips"} All form fields are required.
+    %form{action: "index.html", method: "get"}
+      %fieldset
+        %legend
+          %p
+            %label{for: "name"}
+              Name
+            %input{type: "text", name: "name", value: "", id: "name", class: "text ui-widget-content ui-corner-all"}
+
+          %p
+            %label{for: "email"}
+              Email
+            %input{type: "text", name: "email", value: "", id: "email", class: "text ui-widget-content ui-corner-all"}
+
+          %p
+            %label{for: "comment"}
+              Comment
+            %textarea{cols: "30", rows: "10", name: "comment", id: "comment", class: "text ui-widget-content ui-corner-all"}
+
+      %p
+        %input{type: "submit", value: "Continue"}
