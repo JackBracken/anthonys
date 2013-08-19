@@ -5,24 +5,25 @@
     St. Anthony's Bed &amp; Breakfast
   %meta{name: "description", content: "St. Anthony's Bed &amp; Breakfast, Rosslare, Co. Wexford"}/
   %meta{name: "author", content: "Jack Bracken"}/
+  %link{rel: "stylesheet", href: "/css/normalize.min.css"}/
+  %link{rel: "stylesheet", href: "/css/onepcssgrid.css"}/
   %link{rel: "stylesheet", href: "/css/main.css"}/
-  / %link{rel: "stylesheet", href: "/css/normalize.min.css"}/
   %script{src: "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js", type: "text/javascript", charset: "utf-8"}
   %script{type: "text/javascript", src: "/js/enquiry.modal.js"}
   %script{type: "text/javascript", charset: "utf-8"}
 %body
-  #container
+  #container.onepcssgrid-1000
     %header
-      .header-container
-        %h1
-          %a{href: "/"}
-            St. Anthony's Bed &amp; Breakfast
-        %h2
-          Rosslare Harbour, Co. Wexford, Ireland
-        %h3
-          %span.left Telephone: 053 9133599
-          %span.right Mobile: 085 1266842
-        %ul.nav
+      %h1.onerow
+        %a{href: "/"}
+          St. Anthony's Bed &amp; Breakfast
+      %h2.onerow
+        Rosslare Harbour, Co. Wexford, Ireland
+      %h3.onerow
+        %span.col3 Telephone: 053 9133599
+        %span.col3.last Mobile: 085 1266842
+      %nav.onerow
+        %ul
           %a{ href: "/"} Home
           %a{ href: "/contact"} Contact
     #content
