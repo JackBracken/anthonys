@@ -1,31 +1,51 @@
 !!! 5
-%head
-  %meta{charset: "utf-8"}/
-  %title
-    St. Anthony's Bed &amp; Breakfast
-  %meta{name: "description", content: "St. Anthony's Bed &amp; Breakfast, Rosslare, Co. Wexford"}/
-  %meta{name: "author", content: "Jack Bracken"}/
-  %link{rel: "stylesheet", href: "/css/normalize.min.css"}/
-  %link{rel: "stylesheet", href: "/css/onepcssgrid.css"}/
-  %link{rel: "stylesheet", href: "/css/main.css"}/
-  %script{src: "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js", type: "text/javascript", charset: "utf-8"}
-  %script{type: "text/javascript", src: "/js/enquiry.modal.js"}
-  %script{type: "text/javascript", charset: "utf-8"}
-%body
-  #container.onepcssgrid-1000
-    %header
-      %h1.onerow
-        %a{href: "/"}
+/[if lt IE 7 ]<html class="ie ie6" lang="en">
+/[if IE 7 ]<html class="ie ie7" lang="en">
+/[if IE 8 ]<html class="ie ie8" lang="en">
+:plain
+  <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+%html{:lang => "en"}
+  /<![endif]
+  %head
+    / Basic Page Needs
+    %meta{charset: "utf-8"}/
+    %title
+      St. Anthony's Bed &amp; Breakfast
+    %meta{name: "description", content: "St. Anthony's Bed &amp; Breakfast, Rosslare, Co. Wexford"}/
+    %meta{name: "author", content: "Jack Bracken"}/
+    
+    / Mobile Specific Metas
+    %meta{name: "viewport", content:"width=device-width, initial-scale=1, maximum-scale=1"}/
+
+    / CSS
+    %link{rel: "stylesheet", href: "/css/base.css"}/
+    %link{rel: "stylesheet", href: "/css/skeleton.css"}/
+    %link{rel: "stylesheet", href: "/css/layout.css"}/
+
+    :plain
+      <!--[if lt IE 9]>
+    %script{src: "http://html5shim.googlecode.com/svn/trunk/html5.js"}
+    /<![endif
+
+    / Favicons
+  
+    %link{rel: "shortcut icon", href: "/images/favicon.ico"}/
+    %link{rel: "apple-touch-icon", href: "/images/apple-touch-icon.png"}/
+    %link{rel: "apple-touch-icon", sizes: "72x72", href: "/images/apple-touch-icon-72x72.png"}/
+    %link{rel: "apple-touch-icon", sizes: "114x114", href: "/images/apple-touch-icon-114x114.png"}/
+
+    / %script{src: "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js", type: "text/javascript", charset: "utf-8"}
+    / %script{type: "text/javascript", src: "/js/enquiry.modal.js"}
+    / %script{type: "text/javascript", charset: "utf-8"}
+  %body
+    .container
+      .sixteen.columns
+        %h1.remove-bottom{style: "marhin-top: 40px"}
           St. Anthony's Bed &amp; Breakfast
-      %h2.onerow
-        Rosslare Harbour, Co. Wexford, Ireland
-      %h3.onerow
-        %span.col3 Telephone: 053 9133599
-        %span.col3.last Mobile: 085 1266842
-      %nav.onerow
-        %ul
-          %a{ href: "/"} Home
-          %a{ href: "/contact"} Contact
-    #content
+        %h5
+          Rosslare Harbour, Co. Wexford, Ireland
+        %h5
+          Telephone: 053 9133599
+          Mobile: 085 1266842
+        %hr/
       =yield
-    %footer
