@@ -37,6 +37,7 @@
 		line-height: 1; }
 	ol, ul {
 		list-style: none; }
+
 	blockquote, q {
 		quotes: none; }
 	blockquote:before, blockquote:after,
@@ -101,8 +102,8 @@
 
 /* #Lists
 ================================================== */
-	ul, ol { margin-bottom: 20px; }
-	ul { list-style: none outside; }
+	ul, ol { margin-bottom: 20px;}
+	ul { list-style-image: url("/img/list-arrow.png"); margin-left: 16px;}
 	ol { list-style: decimal; }
 	ol, ul.square, ul.circle, ul.disc { margin-left: 30px; }
 	ul.square { list-style: square outside; }
@@ -112,7 +113,7 @@
 	ol ol, ol ul { margin: 4px 0 5px 30px; font-size: 90%;  }
 	ul ul li, ul ol li,
 	ol ol li, ol ul li { margin-bottom: 6px; }
-	li { line-height: 18px; margin-bottom: 12px; }
+	li { line-height: 18px; margin-bottom: 12px; margin-left: 12px; }
 	ul.large li { line-height: 21px; }
 	li p { line-height: 21px; }
 
@@ -121,7 +122,14 @@
 
 	img.scale-with-grid {
 		max-width: 100%;
-		height: auto; }
+		height: auto;
+		margin-top: 21px;
+		margin-bottom: 21px;}
+	
+	img.center {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;}
 
 
 /* #Buttons
@@ -265,5 +273,11 @@
 	.remove-bottom { margin-bottom: 0 !important; }
 	.half-bottom { margin-bottom: 10px !important; }
 	.add-bottom { margin-bottom: 20px !important; }
+
+	.sticky.stuck {
+		position:fixed;
+		top:0;
+	}
+
 
 

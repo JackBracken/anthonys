@@ -7,7 +7,7 @@
 %html{:lang => "en"}
   /<![endif]
   %head
-    / Basic Page Needs
+    / Basic Meta Info
     %meta{charset: "utf-8"}/
     %title
       St. Anthony's Bed &amp; Breakfast
@@ -22,6 +22,7 @@
     %link{rel: "stylesheet", href: "/css/skeleton.css"}/
     %link{rel: "stylesheet", href: "/css/layout.css"}/
 
+    / HTML5 shiv for IE
     :plain
       <!--[if lt IE 9]>
     %script{src: "http://html5shim.googlecode.com/svn/trunk/html5.js"}
@@ -34,13 +35,15 @@
     %link{rel: "apple-touch-icon", sizes: "72x72", href: "/images/apple-touch-icon-72x72.png"}/
     %link{rel: "apple-touch-icon", sizes: "114x114", href: "/images/apple-touch-icon-114x114.png"}/
 
-    / %script{src: "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js", type: "text/javascript", charset: "utf-8"}
-    / %script{type: "text/javascript", src: "/js/enquiry.modal.js"}
-    / %script{type: "text/javascript", charset: "utf-8"}
+    / This site built with love and:
+    / -- The Sinatra ruby micro-framework    http://www.sinatrarb.com/
+    / -- GetSkelton BoilerPlate              http://www.getskeleton.com/
+    / -- jQuery javascript framework         http://jquery.com/
+    / -- jQuery waypoints                    https://github.com/imakewebthings/jquery-waypoints/
   %body
     .container
       .sixteen.columns
-        %h1.remove-bottom{style: "marhin-top: 40px"}
+        %h1.remove-bottom{style: "margin-top: 40px"}
           St. Anthony's Bed &amp; Breakfast
         %h5
           Rosslare Harbour, Co. Wexford, Ireland
