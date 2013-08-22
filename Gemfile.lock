@@ -7,6 +7,8 @@ GEM
       net-sftp (>= 2.0.0)
       net-ssh (>= 2.0.14)
       net-ssh-gateway (>= 1.1.0)
+    capistrano-maintenance (0.0.4)
+      capistrano (>= 2.0.0)
     haml (4.0.3)
       tilt
     highline (1.6.16)
@@ -49,6 +51,7 @@ PLATFORMS
 
 DEPENDENCIES
   capistrano
+  capistrano-maintenance
   haml
   pony
   rvm-capistrano

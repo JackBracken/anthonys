@@ -274,6 +274,10 @@
 	.half-bottom { margin-bottom: 10px !important; }
 	.add-bottom { margin-bottom: 20px !important; }
 
+	.sticky {
+		width: 240px;
+	}
+
 	.sticky.stuck {
 		position:fixed;
 		top:0;

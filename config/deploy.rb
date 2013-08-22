@@ -1,5 +1,5 @@
-set :stages, %w(production staging development)
-set :default_stage, "development"
+set :stages, %w(production development)
+set :default_stage, "production"
 
 require 'bundler/capistrano'
 require 'capistrano/ext/multistage'
