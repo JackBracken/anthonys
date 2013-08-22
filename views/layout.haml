@@ -8,8 +8,8 @@
   / Basic Meta Info
   %meta{charset: "utf-8"}/
   %title
-    St. Anthony's Bed &amp; Breakfast
-  %meta{name: "description", content: "St. Anthony's Bed &amp; Breakfast, Rosslare, Co. Wexford"}/
+    St. Anthony's Bed &amp; Breakfast &raquo; Rosslare Harbour, Co. Wexford, Ireland
+  %meta{name: "description", content: "St. Anthony's Bed &amp; Breakfast, located just a few minutes walk from Rosslare Ferryport is the ideal place to stay on your vacation in Ireland."}/
   %meta{name: "author", content: "Jack Bracken"}/
   
   / Mobile Specific Metas
@@ -46,13 +46,13 @@
   / -    jQuery waypoints                    https://github.com/imakewebthings/jquery-waypoints/
 %body
   .container
-    .sixteen.columns
-      %h1.remove-bottom{style: "margin-top: 40px"}
+    .sixteen.columns{itemscope: true, itemptype: "http://schema.org/Organization"}
+      %h1.remove-bottom{style: "margin-top: 40px", itemprop: "name"}
         St. Anthony's Bed &amp; Breakfast
+      %h5{itemprop: "address", itemscope: true, itemtype: "http://schema.org/PostalAddress"}
+        <span itemprop="addressLocality">Rosslare Harbour</span>, <span itemprop="addressRegion">Co. Wexford</span>, <span itemprop="addressCountry">Ireland</span>
       %h5
-        Rosslare Harbour, Co. Wexford, Ireland
-      %h5
-        Telephone: 053 9133599
-        Mobile: 085 1266842
+        Telephone: <span itemprop="telephone">053 9133599</span>
+        Mobile: <span itemprop="telephone">085 1266842</span>
       %hr/
     =yield
