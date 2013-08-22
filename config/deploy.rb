@@ -1,6 +1,7 @@
 set :stages, %w(production development)
 set :default_stage, "production"
 
+require 'capistrano-rbenv'
 require 'bundler/capistrano'
 require 'capistrano/ext/multistage'
 require 'capistrano/maintenance'
