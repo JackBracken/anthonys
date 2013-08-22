@@ -10,12 +10,11 @@ load "config/recipes/base"
 load "config/recipes/ssh"
 load "config/recipes/nginx"
 load "config/recipes/unicorn"
-load "config/recipes/rbenv"
 load "config/recipes/check"
 
 
 set :application, "anthonys"
-
+set :rbenv_ruby_version, "2.0.0-p247"
 set :maintenance_template_path, "config/recipes/templates/maintenance.html.erb"
 
 
