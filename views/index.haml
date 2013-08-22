@@ -4,68 +4,99 @@
     %strong
       Located in Rosslare Harbour and within a few minutes walk of the Ferryport, St. Anthony's is a comfortable family run Bed and Breakfast providing all the comforts of home.
   %img.scale-with-grid.center{src: "/img/house.jpg"}
-  %p
-    We are within easy walking distance of Rosslare Europort, Bus and Rail Stations, local Pubs and Restaurants, and just a twenty minute drive from Wexford town centre.
+  %p We are within easy walking distance of Rosslare Europort, Bus and Rail Stations, local Pubs and Restaurants, and just a twenty minute drive from Wexford town centre.
   %p All bedrooms are spacious and comfortable with an en-suite, TV and tea/coffee making facilities and hair dryer.
-  %img.scale-with-grid.center{src: "/img/bedrooms.jpg"}
-  %p Private off-street parking facilities and wireless Broadband are available, and we also provide an early morning breakfast service to accommodate those
-
+  %p Private off-street parking facilities and wireless Broadband are available, and we also provide an early morning breakfast service to accommodate those using the ferry.
+  .flexslider
+    %ul.slides
+      %li.flex-img
+        %img{src: "/img/bedroom1.jpg", alt: ""}
+        %p.flex-caption Our bedrooms are bright and airy.
+      %li.flex-img
+        %img{src: "/img/bedroom2.jpg", alt: ""}
+        %p.flex-caption Our bedrooms offer all of the comforts of home.
+      %li.flex-img
+        %img{src: "/img/diningroom1.jpg", alt: ""}
+        %p.flex-caption We offer an early breakfast to accommodate those using the ferry.
+      %li.flex-img
+        %img{src: "/img/diningroom2.jpg", alt: ""}
+        %p.flex-caption Comfortable furnishings and a relaxed atmosphere to unwind.
   %h4 Tarrifs
   %ul
     %li Bed and Breakfast: €35.00 per person sharing
     %li Single Rate : €45.00
     %li Reductions for groups of 4 or over
+  %hr/
+  %h3 How to find us
+  %br/
+  #map-container
+    #aspect-ratio
+    #map
+  %hr/
   %h3 A bit about Wexford
-  %p 
-    There's always something fun to do in Wexford, maybe you can&hellip;
-    %ul
-      %li
-        %strong Go for a swim in our safe, sandy beaches.
-        %p Surrounded by miles upon miles beautiful, golden coasts, Rosslare is surrounded by three of Ireland's blue flag beaches:
-        %ul.disc
-          %li
-            %a{href: "http://www.wexford.ie/wex/Departments/Environment/Beaches/RosslareBeach/#d.en.15563"}
-              Rosslare Strand
-          %li
-            %a{href: "http://www.wexford.ie/wex/Departments/Environment/Beaches/MorriscastleBeach/"}
-              Morriscastle Beach
-          %li
-            %a{href: "http://www.wexford.ie/wex/Departments/Environment/Beaches/CurracloeBeach/#d.en.15456"}
-              Curracloe Beach
-      %li
-        %strong Spend a relaxing afternoon fishing.
-        %p With dozens of waterways and hundreds of kilometres of coasts, you're never far from a good fishing spot in County Wexford. There is a map of some of these locations <a href="http://goo.gl/maps/HsmgV">here</a> for your convenience.
-      %li
-        %strong Play a round of golf.
-        %p Wexford is home to many of the countries <a href="http://www.visitwexford.ie/index.php?contentid=golf">finest golf courses</a>, including several championship courses.
-      %li
-        %strong Find a little excitement?
-        %p Maybe go horse-riding at the local stables, rent a boat and visit the islands, or go on an adventure in one of Wexford's adventure parks. You can even go kite-surfing just up the road in Hooked Kite Surfing on Duncannon beach.
-      %li
-        %strong Take in some of our history.
-        %p Visit the Irish National Heritage Park, walk around Johnstown Castle and its beautiful grounds or see what life was like for Irish emigrants aboard the Dunbrody Famine Ship in New Ross.
+  %p There's always something fun to do in Wexford, maybe you can&hellip;
+  %ul
+    %li
+      %strong Go for a swim in our safe, sandy beaches.
+      %p Surrounded by miles upon miles beautiful, golden coasts, Rosslare is surrounded by three of Ireland's blue flag beaches:
+      %ul.disc
+        %li
+          %a{href: "http://www.wexford.ie/wex/Departments/Environment/Beaches/RosslareBeach/#d.en.15563"}
+            Rosslare Strand
+        %li
+          %a{href: "http://www.wexford.ie/wex/Departments/Environment/Beaches/MorriscastleBeach/"}
+            Morriscastle Beach
+        %li
+          %a{href: "http://www.wexford.ie/wex/Departments/Environment/Beaches/CurracloeBeach/#d.en.15456"}
+            Curracloe Beach
+    %li
+      %strong Spend a relaxing afternoon fishing.
+      %p With dozens of waterways and hundreds of kilometres of coasts, you're never far from a good fishing spot in County Wexford. There is a map of some of these locations <a href="http://goo.gl/maps/HsmgV">here</a> for your convenience.
+    %li
+      %strong Play a round of golf.
+      %p Wexford is home to many of the countries <a href="http://www.visitwexford.ie/index.php?contentid=golf">finest golf courses</a>, including several championship courses.
+    %li
+      %strong Find a little excitement?
+      %p Maybe go horse-riding at the local stables, rent a boat and visit the islands, or go on an adventure in one of Wexford's adventure parks. You can even go kite-surfing just up the road in Hooked Kite Surfing on Duncannon beach.
+    %li
+      %strong Take in some of our history.
+      %p Visit the Irish National Heritage Park, walk around Johnstown Castle and its beautiful grounds or see what life was like for Irish emigrants aboard the Dunbrody Famine Ship in New Ross.
+  %hr/
 .one-third.column
   .sticky
     %h3
       Make an enquiry.
-    %form{action: "index.html", method: "get"}
-    %label{for: "name"}
-      Name
-    %input{type: "text", name: "name", value: "", id: "name"}
-    
-    %label{for: "email"}
-      Email address
-    %input{type: "text", name: "email", value: "", id: "email"}
+    %form{action: "/contact", method: "post", id: "contactForm"}
+      %label{for: "name"}
+        Name
+      %input{type: "text", name: "name", required: "", id: "name"}
+      
+      %label{for: "email"}
+        Email address
+      %input{type: "email", name: "email", required: "", id: "email"}
 
-    %label{for: "comment"}
-      When would you like to stay with us?
-    %textarea{name: "comment", id: "comment"}
+      %label{for: "comment"}
+        Details of your visit.
+      %span.sub When will you arrive? How long do you plan to stay? Do you have any requirements or questions?
+      %textarea{name: "comment", required: "", id: "comment"}
 
-    %button{type: "submit"}
-      Submit.
-
+      %button.full-width{type: "submit"}
+        Submit.
+.row
+/ Scripts in footer
 %script{type: "text/javascript", src: "/js/jquery-2.0.3.min.js", charset: "utf-8"}
 %script{type: "text/javascript", src: "/js/waypoints.min.js", charset: "utf-8"}
 %script{type: "text/javascript", src: "/js/waypoints-sticky.min.js", charset: "utf-8"}
+%script{src: "https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"}
+%script{type: "text/javascript", src: "/js/jquery.flexslider.min.js"}
+%script{type: "text/javascript", src: "/js/jquery.validate.min.js"}
+%script{type: "text/javascript", src: "/js/map.js"}
+/ Use waypoint to stick form
 %script
-  $(document).ready(function() {$('.sticky').waypoint('sticky');});
+  $(document).ready(function() {$('.sticky').waypoint('sticky', {offset: 30});});
+/ Flexslider image slider
+%script
+  $(window).load(function() {$('.flexslider').flexslider({animation: "fade", keyboard: false, touch: true});});
+/ Set up form validation
+%script
+  $("#contactForm").validate();
