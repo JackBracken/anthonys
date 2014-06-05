@@ -18,7 +18,7 @@ set :rbenv_ruby_version, "2.0.0-p247"
 set :maintenance_template_path, "config/recipes/templates/maintenance.html.erb"
 
 
-set :user, "cap"
+set :user, "jack"
 set :deploy_via, :remote_cache
 set :use_sudo, false
 set :backup_dir, "#{deploy_to}/backups"
