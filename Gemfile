@@ -1,5 +1,6 @@
 source "http://rubygems.org"
 
+gem "newrelic_rpm"
 gem "sinatra"
 gem "unicorn"
 gem "capistrano"
